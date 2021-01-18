@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			const {clipboard} = require('electron')
+			const d = new Date()
+			function date() {
+				let g  = (d.getMonth() < 9) ? '0'+(d.getMonth()+1) : d.getMonth()+1
+				return d.getDate()+"/"+g+"/"+d.getFullYear()
+			}
+		</script>
+		<style>
+			.toCopy {
+				color: rgba(210, 243, 197, 0.993);
+				background-color: red;
+				margin: 2px 2px 2px 2px;
+				padding: 2px 2px 2px 2px;
+				font-size: 1.3em;
+			}
+
+			.toCopy:hover {
+				cursor: pointer;
+				color: white;
+				border: solid 1px;
+				animation: changecolor 3s;
+				animation-iteration-count: infinite;
+			}
+			@keyframes changecolor {
+				0% {background-color: red;}
+				15% {background-color: rgb(94, 209, 28);}
+				30% {background-color: rgb(13, 221, 228);}
+				45% {background-color: rgb(19, 91, 224);}
+				60% {background-color: rgb(87, 11, 131);}
+				75% {background-color: rgb(19, 91, 224);}
+				90% {background-color: rgb(13, 221, 228);}
+				100% {background-color: rgb(94, 209, 28);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="toCopy"><script>document.write(date() + " S")</script></div>
+		<div class="toCopy"><script>document.write(date() + " C")</script></div>
+		<div class="toCopy">Attestation de responsabilité civile à fournir</div>
+		<div class="toCopy">Récapitulatif de l'inscription à fournir</div>
+		<div class="toCopy">Attestation de bourses à fournir</div>
+		<div class="toCopy">Relevé de notes du bac officiel à fournir</div>
+		<div class="toCopy">Autorisation droit à l'image à compléter</div>
+		<script>
+			let doc = document.getElementsByClassName('toCopy')
+			for (const d of doc) {
+				d.addEventListener("click", () => {
+					clipboard.writeText(d.innerText, "selection")
+				})
+			}
+		</script>
+	</body>
+</html>

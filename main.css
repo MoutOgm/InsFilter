@@ -1,0 +1,103 @@
+
+#List {
+	position: relative;
+	top: 50px;
+	height: 90vh;
+	overflow: auto;
+}
+.all {
+	margin: 10px 10px 10px 10px;
+	padding: 5px 5px 5px 5px;
+	display: block;
+	cursor: pointer;
+}
+span {
+	display: inline-block;
+	margin-right: 5px;
+}
+span.C,span.J,span.L,span.E{
+	padding: 1px 1px 1px 1px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(134, 98, 98);
+}
+.all:hover {
+	box-sizing: content-box;
+	border: solid black 1px;
+}
+.Transmis {
+	background-color: rgb(185, 112, 112);
+}
+
+.Attente {
+	background-color: rgb(138, 138, 207);
+}
+.Fini {
+	display: none;
+	background-color: rgb(29, 179, 29);
+}
+.Refus {
+	display: none;
+	background-color: rgb(101, 48, 151);
+	color: white;
+}
+.TA {
+	background-image: linear-gradient(to right, rgb(185, 112, 112) ,rgb(138, 138, 207), rgb(185, 112, 112) ,rgb(138, 138, 207));
+}
+button:hover{
+	cursor: pointer;
+}
+#b1 {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+}
+#b2 {
+	position: fixed;
+	left: 150px;
+	top: 0px;
+}
+#b3 {
+	position: fixed;
+	left: 250px;
+	top: 0px;
+}
+#b4 {
+	position: fixed;
+	left: 350px;
+	top: 0px;
+}
+#b5 {
+	position: fixed;
+	left: 400px;
+	top: 0px;
+}
+#b6 {
+	position: fixed;
+	left: 400px;
+	top: 25px;
+}
+#b7 {
+	position: fixed;
+	left: 150px;
+	top: 25px;
+}
+#b8 {
+	position: fixed;
+	left: 700px;
+	top: 0px;
+}
+#inputName {
+	position: fixed;
+	left: 500px;
+	top: 0px;
+}
+#inputNumber {
+	position: fixed;
+	left: 500px;
+	top: 25px;
+}
+#inputSpan {
+	position: fixed;
+	left: 800px;
+	top: 0px;
+}
